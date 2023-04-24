@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    background-image: url("../images/background1.jpg");
+    background-attachment: fixed;
+  }
+  
+  body {
+    font-family: Arial;
+    background-color: #8f769c80;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width: 450%;
+    width: 100%;
+  }
+  
+  
+  @media screen and (max-width: 767px) {
+    html {
+        background-image: url("../images/background-mobile.jpg");
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    aside, section {
+        width: 95%;
+    }
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    header h2 {
+        margin-right: 0;
+        text-align: center;
+    }
+    #navigation {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65vw;
+        height: 100vh;
+        background-color: rgba(137, 43, 226, 0.8);
+    }
+    nav ul {
+        flex-direction: column;
+        margin-top: 30vh;
+    }
+    nav li {
+        background-color: transparent;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+}

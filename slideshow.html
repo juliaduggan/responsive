@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-slideshow.css">
+    <script src="js/scripts.js"></script>
+    <title>Peter McPoland Slide Show</title>
+</head>
+<body>
+    <header>
+        <img src="images/communityIcon_lsupsqwk3ax71.png" alt="logo images">
+        <h2>Peter McPoland Slide Show</h2>
+        <i onclick="showMenu()" id="hamburger-icon" class="fa-solid fa-bars"></i>
+        <i onclick="hideMenu()" id="x-icon" class="fa-solid fa-xmark"></i>
+        <nav id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imagegallery.html">Image Gallery</a></li>
+                <li><a href="videogallery.html">Video Gallery</a></li>
+                <li><a href="slideshow.html">Image Carousel</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="imagecarousel">
+                <div class="image fadeout"><img src="images/224163156_255374883062073_4520590350169979256_n.webp" alt=""></div>
+                <div class="image fadeout"><img src="images/62e188d61090ccf1fcbba47e_Peter McPoland 1.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/large.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/large_image.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/62e43019-a002-435e-bed0-3f85bf98cb28_rwc_320x0x718x718x718.jpg" alt=""></div>
+                <div class="prev" onclick="showImage(-1)"><i class="fa-solid fa-angles-left"></i></div>
+                <div class="next" onclick="showImage(1)"><i class="fa-solid fa-angles-right"></i></div>   
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright"></span> Julia Duggan</p>
+    </footer>
+</body>
+</html>

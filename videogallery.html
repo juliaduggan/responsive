@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/cropped-Moon-Favicon-192x192.png" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-videogallery.css">
+    <title>Alfie Templeman Video Gallery</title>
+</head>
+<body>
+    <header>
+        <img src="images/Alfie-Templeman-Logo-White.png" alt="">
+        <h2>Alfie Templeman Video Gallery</h2>
+        <i onclick="showMenu()" id="hamburger-icon" class="fa-solid fa-bars"></i>
+        <i onclick="hideMenu()" id="x-icon" class="fa-solid fa-xmark"></i>
+        <nav id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="imagegallery.html">Image Gallery</a></li>
+                <li><a href="videogallery.html">Video Gallery</a></li>
+                <li><a href="slideshow.html">Image Carousel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#vid1">Video 1</a></li>
+            <li><a href="#vid1">Video 2</a></li>
+            <li><a href="#vid3">Video 3</a></li>
+            <li><a href="#vid4">Video 4</a></li>
+            <li><a href="#vid5">Video 5</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="vid1">
+            <h4>Video 1</h4>
+            <div class="videowrapper"><iframe src="https://www.youtube.com/embed/XUy4zqHc7q0" title="Alfie Templeman - Colour Me Blue | Deezer Sessions, Paris" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="caption"><p>Alfie Templeman performing his song "Colour Me Blue" off his album "Mellow Moon" during the Deezer Sessions in Paris</p></div>
+        </article>
+        <article id="vid2">
+            <h4>Video 2</h4>
+            <div class="videowrapper"><iframe src="https://www.youtube.com/embed/noEdAU9IfuM" title="Alfie Templeman - Happiness in Liquid Form | On the Come Up: United Kingdom" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="caption"><p>Accustic version of Alfie Templeman's song "Happiness in Liquid Form as part of ASCAP's On the Come Up: United Kingdom series"</p></div>
+        </article>
+        <article id="vid3">
+            <h4>Video 3</h4>
+            <div class="videowrapper"><iframe width="640" height="360" src="https://www.youtube.com/embed/iyKgX3mBboI" title="Alfie Templeman - Like An Animal (BBC Music Introducing session)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="caption">Alfie performing "Like An Animal" at the BBC Music Introducing Session when he was 15</div>
+        </article>
+        <article id="vid4">
+            <h4>Video 4</h4>
+            <div class="videowrapper"><iframe src="https://www.youtube.com/embed/HZ2bgQV7jeE" title="Alfie Templeman - Mellow Moon Tour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="caption"><p>An inside look at Alfie Templeman's tour, singing songs off his album "Mellow Moon"</p></div>
+        </article>
+        <article id="vid5">
+            <h4>Video 5</h4>
+            <div class="videowrapper"><iframe width="640" height="360" src="https://www.youtube.com/embed/kKmCrXMKo08" title="Alfie Templeman - Stop Thinking (Reading + Leeds 2019)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="caption"><p>Alfie Templeman performs Stop Thinking on the BBC Music Introducing stage at Reading + Leeds 2019</p></div>
+        </article>
+
+        <div><button onclick="topFunction()" id="cornerBtn" title="Go to top"><i class="fa-solid fa-angle-up" style="color: #c26f4f;"></i></button></div>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="copyright"></span> Julia Duggan</p>
+    </footer>
+
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
