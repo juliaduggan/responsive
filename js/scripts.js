@@ -1,3 +1,23 @@
+const primaryNav = document.getElementByIdElement('navigation');
+const displayButton = document.getElementById('showNavigation');
+
+displayButton.addEventListener("click", slideMenu)
+
+function slideMenu() {
+    let visibility = primaryNav.getAttribute('data-visible');
+
+    if(visibility === "false"){
+        primaryNav.setAttribute("data-visible", "true")
+        displayButton.setAttribute("data-visible", "true")
+
+    }
+    else {
+        primaryNav.setAttribute("data-visible", "false")
+        displayButton.setAttribute("data-visible", "false")
+
+    }
+}
+
 function showMenu() {
     document.getElementById('navigation').style.transform = "translateX(0%)";
     document.getElementById('x-icon').style.display = "block";
