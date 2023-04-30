@@ -1,52 +1,57 @@
-const primaryNav = document.getElementByIdElement('navigation');
-const displayButton = document.getElementById('showNavigation');
+window.onload = function () {
+    let d = new Date();
+    document.getElementById('copyright').innerHTML = d.getFullYear();
+}
 
-displayButton.addEventListener("click", slideMenu)
+const primaryNav = document.getElementById('navigation');
+const displayButton = document.getElementById('displayMenu');
+
+displayButton.addEventListener("click", slideMenu);
 
 function slideMenu() {
-    let visibility = primaryNav.getAttribute('data-visible');
+    let visibility = primaryNav.getAttribute("data-visible");
 
-    if(visibility === "false"){
-        primaryNav.setAttribute("data-visible", "true")
-        displayButton.setAttribute("data-visible", "true")
-
+    // if button is clicked, open the menu
+    if(visibility === "false") {
+        primaryNav.setAttribute("data-visible", "true");
+        displayButton.setAttribute("data-visible", "true");
     }
     else {
-        primaryNav.setAttribute("data-visible", "false")
-        displayButton.setAttribute("data-visible", "false")
-
+        primaryNav.setAttribute("data-visible", "false");
+        displayButton.setAttribute("data-visible", "false");
     }
 }
 
-function showMenu() {
-    document.getElementById('navigation').style.transform = "translateX(0%)";
-    document.getElementById('x-icon').style.display = "block";
-    document.getElementById('hamburger-icon').style.display = "none";
+// function displayMenu() {
+//     document.getElementById('hamburger-icon').style.display = "none";
+//     document.getElementById('x-icon').style.display = "block";
+//     document.getElementById('navigation').style.transform = "translateX(0%)";
+//     // document.getElementById('navigation').style.display = "block";
+// }
 
-}
-function hideMenu() {
-    document.getElementById('navigation').style.transform = "translateX(100%)";
-    document.getElementById('x-icon').style.display = "none";
-    document.getElementById('hamburger-icon').style.display = "block";
-    // document.getElementById('navigation').style.display = "none";
+// function hideMenu() {
+//     document.getElementById('navigation').style.transform = "translateX(100%)";
+//     document.getElementById('hamburger-icon').style.display = "block";
+//     document.getElementById('x-icon').style.display = "none";
+//     // document.getElementById('navigation').style.display = "none";
 
-}
+// }
 
-window.addEventListener("resize", hideButtons);
+// window.addEventListener("resize", hideButtons);
 
-function hideButtons() {
+// function hideButtons() {
+//     if(window.innerWidth > 767) {
+//         document.getElementById('hamburger-icon').style.display = "none";
+//         document.getElementById('x-icon').style.display = "none";
+//         document.getElementById('navigation').style.transform = "translateX(0%)";
+    
+//     }
+//     else {
+//         document.getElementById('hamburger-icon').style.display = "block";   
+//         document.getElementById('navigation').style.transform = "translateX(100%)";
 
-    if(window.innerWidth > 767) {
-        document.getElementById('x-icon').style.display = "none";
-        document.getElementById('hamburger-icon').style.display = "none";
-        document.getElementById('navigation').style.transform = "translateX(0%)";
-    }
-    else {
-        document.getElementById('hamburger-icon').style.display = "block";
-        document.getElementById('navigation').style.transform = "translateX(100%)";
-
-    }
-}
+//     }
+// }
 
 function currentYear() {
     let d = new Date();
